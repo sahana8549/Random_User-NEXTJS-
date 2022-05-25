@@ -1,7 +1,7 @@
 import React, { useContext } from "react";
 import { RootContext } from "../../RootContext/RootContext";
 
-import "./style.module.css";
+import styles from "./style.module.css";
 
 function RadioButtons() {
   const genders = ["Male", "Female", "All"];
@@ -17,7 +17,7 @@ function RadioButtons() {
       {genders.map((gen, index) => (
         <div key={index}>
           <input
-            className="button"
+            className={styles.button}
             type="radio"
             value={gen}
             name="gender"
@@ -25,7 +25,7 @@ function RadioButtons() {
             checked={gender1 === gen}
             onChange={handleGenders}
           />
-          <label className="label" htmlFor={`${gen}`}>
+          <label className={styles.label} htmlFor={`${gen}`}>
             {gen}
           </label>
         </div>
