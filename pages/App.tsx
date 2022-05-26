@@ -1,8 +1,11 @@
 import type { NextPage } from "next";
-
+import "@fortawesome/fontawesome-svg-core/styles.css"; // import Font Awesome CSS
+import { config } from "@fortawesome/fontawesome-svg-core";
+config.autoAddCss = false;
 import { useContext, useEffect, useState } from "react";
 import { Card, RadioButtons } from "../components";
 import { RootContext } from "../RootContext/RootContext";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 const list = [
   { id: 0, label: "AU" },
@@ -45,7 +48,7 @@ const App = () => {
   return (
     <div className="appContainer">
       <RadioButtons />
-      <h5>Select Nationality:</h5>
+      <h5 className="heading">Select Nationality:</h5>
       <div className="dropdown">
         <div
           data-test-id="test-span"

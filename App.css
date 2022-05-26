@@ -58,3 +58,7 @@
 .icon.open {
   transform: rotate(90deg);
 }
+
+.heading {
+  margin-top: 10px;
+}
